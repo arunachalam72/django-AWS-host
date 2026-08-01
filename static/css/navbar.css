@@ -1,0 +1,728 @@
+
+/* ================================
+   GLOBAL
+================================ */
+
+*{
+    box-sizing:border-box;
+}
+
+
+body{
+
+    padding-top:70px;
+
+}
+
+
+
+/* ================================
+   NAVBAR
+================================ */
+
+
+.shop-navbar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:70px;
+
+    background:white;
+
+    z-index:9999;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+
+
+
+
+.nav-container{
+
+    max-width:1600px;
+
+    height:70px;
+
+    margin:auto;
+
+    padding:0 30px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+
+
+
+
+
+/* ================================
+   LOGO
+================================ */
+
+
+.brand-logo{
+
+    font-size:30px;
+
+    font-weight:800;
+
+    color:#2874f0;
+
+    text-decoration:none;
+
+    white-space:nowrap;
+
+}
+
+
+.brand-logo span{
+
+    color:#ff4d4d;
+
+}
+
+
+
+
+
+
+
+
+/* ================================
+   SEARCH
+================================ */
+
+
+.search-wrapper{
+
+    flex:1;
+
+    max-width:850px;
+
+    min-width:350px;
+
+    position:relative;
+
+}
+
+
+
+
+
+.search-wrapper input{
+
+
+    width:100%;
+
+    height:48px;
+
+    border-radius:25px;
+
+    border:1px solid #ddd;
+
+    background:#f7f7f7;
+
+    padding:0 60px 0 22px;
+
+    outline:none;
+
+    font-size:15px;
+
+
+}
+
+
+
+
+.search-wrapper input:focus{
+
+
+    background:white;
+
+    border-color:#2874f0;
+
+    box-shadow:
+    0 0 0 4px rgba(40,116,240,.12);
+
+
+}
+
+
+
+
+
+.search-btn{
+
+
+    position:absolute;
+
+    right:5px;
+
+    top:5px;
+
+    width:38px;
+
+    height:38px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#2874f0;
+
+    color:white;
+
+    cursor:pointer;
+
+
+}
+
+
+
+
+
+
+
+/* ================================
+   SEARCH SUGGESTIONS
+================================ */
+
+
+.suggestions-box{
+
+
+    position:absolute;
+
+    top:55px;
+
+    left:0;
+
+    width:100%;
+
+    background:white;
+
+    border-radius:12px;
+
+    max-height:350px;
+
+    overflow-y:auto;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+    z-index:99999;
+
+
+}
+
+
+
+
+
+
+
+
+/* ================================
+   MENU
+================================ */
+
+
+.nav-menu{
+
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    flex-shrink:0;
+
+
+}
+
+
+
+
+
+.nav-item{
+
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    padding:8px 10px;
+
+    border-radius:8px;
+
+    color:#333;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:600;
+
+
+}
+
+
+
+.nav-item i{
+
+    color:#2874f0;
+
+}
+
+
+.nav-item:hover{
+
+
+    background:#2874f0;
+
+    color:white;
+
+
+}
+
+
+.nav-item:hover i{
+
+    color:white;
+
+}
+
+
+
+
+
+
+
+/* ================================
+   PROFILE
+================================ */
+
+
+.profile-link{
+
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#333;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    white-space:nowrap;
+
+
+}
+
+
+
+
+.profile-link img{
+
+
+    width:38px;
+
+    height:38px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:2px solid #2874f0;
+
+
+}
+
+
+
+
+
+
+
+
+/* ================================
+   LOGIN
+================================ */
+
+
+.login-btn{
+
+
+    background:#2874f0;
+
+    color:white;
+
+    padding:10px 22px;
+
+    border-radius:25px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    white-space:nowrap;
+
+
+}
+
+
+
+.login-btn:hover{
+
+    background:#125bd1;
+
+    color:white;
+
+}
+
+
+
+
+
+
+
+
+
+/* ================================
+   MOBILE BUTTONS
+================================ */
+
+
+.mobile-toggle,
+.mobile-close{
+
+
+    display:none;
+
+    border:none;
+
+    background:none;
+
+    color:#2874f0;
+
+    font-size:25px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ================================
+   LAPTOP
+================================ */
+
+
+@media(max-width:1300px){
+
+
+.nav-container{
+
+    padding:0 20px;
+
+    gap:15px;
+
+}
+
+
+.search-wrapper{
+
+    max-width:650px;
+
+    min-width:280px;
+
+}
+
+
+
+.nav-item{
+
+    padding:7px;
+
+}
+
+
+
+.nav-item span{
+
+    display:none;
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ================================
+   TABLET + MOBILE
+================================ */
+
+
+@media(max-width:991px){
+
+
+.shop-navbar{
+
+    height:65px;
+
+}
+
+
+
+.nav-container{
+
+
+    height:65px;
+
+    padding:0 12px;
+
+    gap:8px;
+
+
+}
+
+
+
+
+.brand-logo{
+
+    font-size:20px;
+
+}
+
+
+
+.search-wrapper{
+
+
+    max-width:none;
+
+    min-width:0;
+
+    flex:1;
+
+
+}
+
+
+
+
+
+.search-wrapper input{
+
+
+    height:40px;
+
+    font-size:13px;
+
+}
+
+
+
+.search-btn{
+
+
+    width:34px;
+
+    height:34px;
+
+    top:3px;
+
+
+}
+
+
+
+
+.mobile-toggle{
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:40px;
+
+    height:40px;
+
+    flex-shrink:0;
+
+
+}
+
+
+
+
+
+.nav-menu{
+
+
+    position:fixed;
+
+    top:0;
+
+    right:-320px;
+
+    width:300px;
+
+    height:100vh;
+
+    background:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    padding:80px 25px;
+
+    gap:15px;
+
+    transition:.35s;
+
+    box-shadow:-10px 0 30px rgba(0,0,0,.2);
+
+
+}
+
+
+
+.nav-menu.active{
+
+    right:0;
+
+}
+
+
+
+.mobile-close{
+
+
+    display:block;
+
+    position:absolute;
+
+    top:20px;
+
+    right:20px;
+
+
+}
+
+
+
+
+.nav-item,
+.profile-link,
+.login-btn{
+
+    width:100%;
+
+}
+
+
+
+.nav-item span{
+
+    display:inline;
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+
+@media(max-width:480px){
+
+
+.nav-container{
+
+    padding:0 8px;
+
+}
+
+
+
+.brand-logo{
+
+    font-size:17px;
+
+}
+
+
+
+.search-wrapper input{
+
+    font-size:12px;
+
+}
+
+
+
+.search-wrapper input::placeholder{
+
+    font-size:11px;
+
+}
+
+
+
+.mobile-toggle{
+
+    width:35px;
+
+}
+
+
+}
